@@ -1,0 +1,32 @@
+/* Disposition principale */
+.dashboard-layout {
+    display: flex; /* Disposition en ligne */
+    min-height: 100vh; /* Hauteur pleine de l'écran */
+    background-color: #212637; /* Couleur de fond */
+    padding: 0; /* Éviter tout padding global */
+  }
+  
+  /* Conteneur de la navbar */
+  #navbar-container {
+    width: 250px; /* Largeur fixe de la navbar */
+    flex-shrink: 0; /* Empêche la rétraction */
+    background-color: #151A23; /* Couleur de fond */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-left: 30px;
+  }
+  
+  /* Conteneur du contenu principal */
+  #dashboard-container {
+    flex-grow: 1; /* Permet au dashboard de s'étendre */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Ajoute un peu d'espace autour */
+    position: relative; /* Nécessaire pour des ajustements internes */
+    margin-top: 15px;
+  }

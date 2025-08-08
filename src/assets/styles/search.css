@@ -1,0 +1,38 @@
+
+.barSearch {
+    width: 50%; /* Ajustez la largeur du formulaire */
+    margin: auto; /* Centrez-le, si nécessaire */
+    width: 162px;
+    height: 44px;
+    margin-top: -40px;
+    margin-right: 60px;
+
+
+  }
+  .barSearch .form-control {
+    width: 100%; /* Rendre l'input aussi large que le formulaire */
+    height: 40px; /* Modifier la hauteur du champ */
+    font-size: 16px; /* Ajuster la taille du texte */
+    background-color: #151A23;
+  }
+
+  .barSearch .form-control::placeholder {
+    color:white;
+  }
+
+  .button {
+    width: 250px;
+    height: 44px;
+    margin-top: -43px;
+  }
+
+  .form-container {
+    display: flex; /* Aligne les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+    gap: 10px; /* Espace entre le champ de recherche et le bouton */
+  }
+  #search {
+    color:white;
+  }
+
+  

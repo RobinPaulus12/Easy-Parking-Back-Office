@@ -1,0 +1,152 @@
+
+body {
+  background-color: #212637 !important;
+}
+
+/* Style global pour la barre de navigation */
+#navbar {
+  height: 580px;
+  width: 250px;
+  background-color: #151A23; /* Couleur de fond */
+  border-radius: 8px; /* Coins arrondis */
+  font-family: 'Arial', sans-serif; /* Police générale */
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  margin-bottom: -23px;
+}
+
+#navbar2 {
+  height: 200px;
+  width: 250px;
+  border-radius: 8px; /* Coins arrondis */
+  background-color: #151A23; 
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+#navbar2 .disconnect-navbar {
+color:#F24F4F;
+text-align: center;
+margin-top: 70px;
+cursor: pointer;
+}
+
+#icon {
+  width: 24px;
+  height: 24px;
+  color: #0d0d0e;
+}
+
+/* Style pour le titre de la navbar */
+#navbar .navbar-brand {
+  font-size: 20px; /* Taille du texte */
+  font-weight: bold; /* Texte en gras */
+  color: #007bff; /* Couleur primaire */
+  margin-bottom: 10px; /* Espacement en bas */
+  text-align: center;
+}
+
+/* Style des liens principaux */
+#navbar .nav-link {
+  color: #cbc9c9; /* Couleur du texte */
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Animation douce */
+  margin-top: -30px;
+  margin-right: 100px;
+}
+
+/* Style au survol des liens */
+#navbar .nav-link:hover {
+  background-color: #52889F;
+  color: white;
+  width: 200px;
+}
+
+/* Style pour les sous-liens (décalage) */
+#navbar .nav-link.ms-3 {
+  font-size: 14px;
+  color: #555;
+  padding: 8px 10px;
+}
+
+/* Survol des sous-liens */
+#navbar .nav-link.ms-3:hover {
+  background-color: #e0e0e0;
+  color: #333;
+  
+}
+
+/* Style actif pour les liens */
+#navbar .nav-link.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Espacement entre les sections */
+#navbar .nav {
+  margin: 0;
+}
+
+/* Conteneur du contenu défilable */
+[data-bs-spy="scroll"] {
+  padding: 20px;
+  max-height: 500px; /* Hauteur maximale */
+  overflow-y: auto; /* Activer le défilement vertical */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Titres des sections */
+[data-bs-spy="scroll"] h4 {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+[data-bs-spy="scroll"] h5 {
+  font-size: 16px;
+ 
+}
+
+
+#navbar #header {
+  display: flex; /* Utilise Flexbox */
+  align-items: center; /* Aligne le logo et le texte verticalement */
+  gap: 10px; /* Espace entre le logo et le texte */
+  margin-left: 0px; 
+  margin-bottom: 50px;
+}
+
+#navbar2 #header2 {
+  display: flex; /* Utilise Flexbox */
+  align-items: center; /* Aligne le logo et le texte verticalement */
+  gap: 10px; /* Espace entre le logo et le texte */
+  margin-left: 35px; 
+  margin-bottom: 60px;
+}
+
+#navbar2 button {
+  display: none;
+}
+.disconnect-toast {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+  text-align: center;
+}
+
+
+
+

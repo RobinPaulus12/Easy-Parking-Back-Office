@@ -1,0 +1,79 @@
+body {
+    background-color: #151A23;
+}
+
+#checkbox {
+    color:#ffffff;
+}
+
+#name {
+    color: #52889F;
+    text-align: center ;
+    font-size: 16px;
+    font-weight: 700;
+    
+  }
+  
+  .username {
+    width: 327px;
+    height: 52px;
+    background-color:#151A23;
+    border-radius: 5px;
+    border-color: #ffffff;
+    border-width: 1px;
+    color: #ffffff;
+  }
+  
+  .password {
+    width: 327px;
+    height: 52px;
+    background-color:#151A23;
+    border-radius: 5px;
+    border-color: #ffffff;
+    border-width: 1px;
+    color: #ffffff;
+  }
+  
+  #header {
+    display: flex; /* Utilise Flexbox */
+    align-items: center; /* Aligne le logo et le texte verticalement */
+    gap: 10px; /* Espace entre le logo et le texte */
+    margin-left: 80px; 
+    margin-bottom: 50px;
+  }
+  
+  /* Champs de formulaire */
+  #label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-align: left;
+    color:#ffffff
+  }
+  
+  /* Bouton de connexion */
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #52889F;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+  }
+  
+  button:hover {
+    background-color: #5290a5;
+  }
+
+  .error-text {
+    
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    width: 100%;/* Pour occuper toute la largeur de l'input */
+    text-align: left; /* Pour s'assurer que le texte est bien aligné */
+  }
+

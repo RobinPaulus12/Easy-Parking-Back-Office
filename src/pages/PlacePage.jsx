@@ -95,7 +95,7 @@ function PlacePage() {
   await fetchPlace(currentPage, searchTerm);
 };
 
-const deleteFromList = async (place_id) => {
+const deleteFromList = async () => {
   const newTotal = totalPlaces - 1;
   const newPage = Math.max(1, Math.ceil(newTotal / placePerPage));
 

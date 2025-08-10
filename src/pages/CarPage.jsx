@@ -80,7 +80,7 @@ function CarPage() {
     await fetchCar(currentPage, searchTerm);
   };
 
-  const deleteFromList = async (car_id) => {
+  const deleteFromList = async () => {
   const newTotal = totalCars - 1;
   const newPage = Math.max(1, Math.ceil(newTotal / carPerPage));
 

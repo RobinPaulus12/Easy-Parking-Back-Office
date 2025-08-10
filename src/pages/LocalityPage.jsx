@@ -61,7 +61,7 @@ function LocalityPage() {
   const handleUpdate = async () => {
     await fetchLocality(currentPage, searchTerm);
   };
-   const deleteFromList = async (locality_id) => {
+   const deleteFromList = async () => {
   const newTotal = totalLocalitiy - 1;
   const newPage = Math.max(1, Math.ceil(newTotal / localityPerPages));
 

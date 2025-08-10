@@ -81,7 +81,7 @@ function ParkingPage() {
     await fetchParking(currentPage, searchTerm);
   };
 
-  const deleteFromList = async (parking_id) => {
+  const deleteFromList = async () => {
   const newTotal = totalParkings - 1;
   const newPage = Math.max(1, Math.ceil(newTotal / parkingPerPages));
 

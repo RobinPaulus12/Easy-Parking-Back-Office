@@ -71,7 +71,7 @@ function UserPage() {
   const handleUpdate = async () => {
     await fetchUsers(currentPage, searchTerm);
   };
-  const deleteFromList = async (user_id) => {
+  const deleteFromList = async () => {
   const newTotal = totalUsers - 1;
   const newPage = Math.max(1, Math.ceil(newTotal / userPerPages));
 

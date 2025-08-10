@@ -3,10 +3,6 @@ import './index.css'
 import App from './App.jsx'
 import store  from './store'
 import { Provider } from 'react-redux'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../assets/styles/pages.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min'; 
-import { useEffect, useState, useContext } from 'react';
 
 createRoot(document.getElementById('root')).render(
     <Provider store={store}>

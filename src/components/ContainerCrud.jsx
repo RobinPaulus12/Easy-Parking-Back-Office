@@ -6,7 +6,7 @@ import EditIcon from '../assets/images/vector.png';
 import DeleteIcon from '../assets/images/trash 1.png';
 
 import DeleteLine from './DeleteLine';
-import AddLine from './Addline';
+import AddLine from './AddLine';
 import ModifyLine from './ModifyLine';
 
 import { useState, useRef } from 'react';

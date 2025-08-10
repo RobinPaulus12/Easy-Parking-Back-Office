@@ -49,7 +49,7 @@ function Home() {
     setAverageDuration(average); 
 
     } catch(error) {
-      toast.error("Erreur lors de la récuperation des places")
+      toast.error("Erreur lors de la récuperation des places", error)
     }
   }
 

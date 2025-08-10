@@ -27,13 +27,10 @@ function UserPage() {
 
   ];
 
-
-  // Charger les champs dans le store
   useEffect(() => {
     dispatch(setFormFields(formFields));
   }, [dispatch]);
 
-  // Fonction pour charger les utilisateurs de la page actuelle
   const fetchUsers = async (page, search = '') => {
     const result = await getUsers(page, search);
     if (!result || !result.rows) return;
@@ -58,23 +55,20 @@ function UserPage() {
     setTotalUsers(parseInt(result.total));
   };
 
-  // Initialisation et changement de page
   useEffect(() => {
     fetchUsers(currentPage, searchTerm);
   }, [currentPage, searchTerm]);
 
-  // Lors de l'ajout, recharger la dernière page
   const addToList = async () => {
     const newTotal = totalUsers + 1;
     const newPage = Math.ceil(newTotal / userPerPages);
     setTotalUsers(newTotal);
-    setCurrentPage(newPage); // Cela déclenchera useEffect → fetchUsers
+    setCurrentPage(newPage);
 
     await fetchUsers(newPage, searchTerm);
   };
 
   const handleUpdate = async () => {
-    // Recharge la liste des voitures à la page actuelle avec le filtre de recherche actuel
     await fetchUsers(currentPage, searchTerm);
   };
   const deleteFromList = async (user_id) => {
@@ -84,7 +78,6 @@ function UserPage() {
   setTotalUsers(newTotal);
   setCurrentPage(newPage);
 
-  // Ne supprime pas localement, on laisse fetchCar faire la mise à jour
   await fetchUsers(newPage, searchTerm);
   };
 

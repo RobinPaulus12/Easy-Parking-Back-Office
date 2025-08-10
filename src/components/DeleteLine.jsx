@@ -1,5 +1,4 @@
 import { Modal, Button, Form } from 'react-bootstrap';
-import { useSelector} from 'react-redux';
 import { useUser} from '../ApiCalls/User.js';
 import { useParking} from '../ApiCalls/Parkings.js';
 import { useLocality } from '../ApiCalls/Locality.js';

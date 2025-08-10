@@ -36,7 +36,7 @@ export const useCar = () => {
         return response.data;
 
       } catch(error) {
-        console.log("Error get car : ",error);
+        console.error("Error get car : ",error);
       }
     };
   
@@ -54,7 +54,7 @@ export const useCar = () => {
   
         return response.data;
       } catch (error) {
-        console.log("Erreur get car : ", error);
+        console.error("Erreur get car : ", error);
       }
     };
   
@@ -83,7 +83,7 @@ export const useCar = () => {
       model,
       fk_user,
     }) => {
-      return await axios({
+      return axios({
         method: "patch",
         url: `${REACT_APP_API_URL}/car/`,
         data: { car_id,

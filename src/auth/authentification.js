@@ -1,7 +1,12 @@
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import { getItem, removeItem, setItem } from './localStorage';
+<<<<<<< HEAD
 export const REACT_APP_API_URL = 'http://localhost:3001';
+=======
+
+export const REACT_APP_API_URL = 'http://localhost:3001'; 
+>>>>>>> ca662fc103c06e4350c955758082ced94406825b
 export const TOKEN_NAME = 'projectToken';
 
 export const logout = async () => {
@@ -34,7 +39,11 @@ export const login = async ({ username, password }) => {
     }
 
     setItem({ tokenName: TOKEN_NAME, token});
+<<<<<<< HEAD
     const decoded = jwtDecode(token); 
+=======
+    const decoded = jwtDecode(token);
+>>>>>>> ca662fc103c06e4350c955758082ced94406825b
     return decoded;
 }
 

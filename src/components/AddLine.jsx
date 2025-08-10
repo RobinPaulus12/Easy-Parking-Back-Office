@@ -60,7 +60,10 @@ function AddLine({ title, onAdd, show, handleClose }) {
     try {
       const formData = {};
       formFields.forEach((field) => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> ca662fc103c06e4350c955758082ced94406825b
         if (field.type === "checkbox") {
            formData[field.name] = e.target[field.name].checked;
         } else {
@@ -165,12 +168,21 @@ function AddLine({ title, onAdd, show, handleClose }) {
       switch (title) {
         case "voitures":
           await addCarWithRegistration({ 
+<<<<<<< HEAD
             license_plate: formDatas.Plaque_Immatriculation,   
             model: formDatas.Modele,        
             firstname: formDatas.Prenom,     
             name: formDatas.Nom,         
             date_of_birth: formDatas.Date_de_Naissance, 
             username: formDatas.Pseudo,     
+=======
+            license_plate: formDatas.Plaque_Immatriculation, 
+            model: formDatas.Modele,           
+            firstname: formDatas.Prenom,      
+            name: formDatas.Nom,          
+            date_of_birth: formDatas.Date_de_Naissance, 
+            username: formDatas.Pseudo,
+>>>>>>> ca662fc103c06e4350c955758082ced94406825b
             password: formDatas.Mot_de_passe,
             isAdmin:formDatas.Admin
           });

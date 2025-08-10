@@ -32,22 +32,20 @@ function CarPage() {
   const transaction = "utilisateur";
 
   useEffect(() => {
-    // Charger les formFields dans le store Redux
     dispatch(setFormFields(formFields));
     dispatch(setTransaction(transaction));
   }, [dispatch, formFields]);
 
   useEffect(() => {
-    // Au tout début, on charge les users une seule fois
     const loadUsers = async () => {
       const usersData = await getUsers();
       setUsers(usersData.rows);
     };
     loadUsers();
-  }, []); // ⬅️ [] pour que ce soit seulement au montage du composant
+  }, []); 
 
   const fetchCar = async (page, search = '') => {
-    const result = await getAllcars(page, search); // Appel de la fonction getUsers
+    const result = await getAllcars(page, search);
     
     if (!result || !result.rows) return;
 
@@ -62,28 +60,25 @@ function CarPage() {
         Utilisateur: username,
       };
     });
-    setCar(formatted); // Stockage des utilisateurs dans l'état
+    setCar(formatted);
     setTotalCars(parseInt(result.total));
   };
 
   useEffect(() => {
     if (users.length > 0) {
-      // On ne fetch les voitures que quand les utilisateurs sont prêts
       fetchCar(currentPage, searchTerm);
     }
-  }, [currentPage, users, searchTerm]); // ⬅️ dépend de currentPage ET users
+  }, [currentPage, users, searchTerm]); 
 
-  // Lors de l'ajout, recharger la dernière page
   const addToList = async () => {
     const newTotal = totalCars + 1;
     const newPage = Math.ceil(newTotal / carPerPage);
     setTotalCars(newTotal);
-    setCurrentPage(newPage); // Cela déclenchera useEffect → fetchUsers
+    setCurrentPage(newPage);
     await fetchCar(newPage, searchTerm);
   };
 
   const handleUpdate = async () => {
-    // Recharge la liste des voitures à la page actuelle avec le filtre de recherche actuel
     await fetchCar(currentPage, searchTerm);
   };
 
@@ -94,7 +89,6 @@ function CarPage() {
   setTotalCars(newTotal);
   setCurrentPage(newPage);
 
-  // Ne supprime pas localement, on laisse fetchCar faire la mise à jour
   await fetchCar(newPage, searchTerm);
 };
 

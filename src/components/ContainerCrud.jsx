@@ -6,7 +6,7 @@ import EditIcon from '../assets/images/vector.png';
 import DeleteIcon from '../assets/images/trash 1.png';
 
 import DeleteLine from './DeleteLine';
-import AddLine from './Addline';
+import AddLine from './AddLine';
 import ModifyLine from './ModifyLine';
 
 import { useState, useRef } from 'react';
@@ -16,8 +16,6 @@ function ContainerCrud({ title, button, columns, data, addToList, currentPage, s
   const idToDeleteModifyRef = useRef(null);
   const [selectedRow, setSelectedRow] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
-
-  // états modale
   const [showAdd, setShowAdd] = useState(false);
   const [showModify, setShowModify] = useState(false);
   const [showDelete, setShowDelete] = useState(false);
@@ -113,7 +111,6 @@ function ContainerCrud({ title, button, columns, data, addToList, currentPage, s
             color="primary"
           />
       </div>
-      {/* Modales React-Bootstrap */}
       <AddLine title={title} onAdd={addToList} show={showAdd} handleClose={() => setShowAdd(false)} />
       <ModifyLine title={title} idToDeleteModifyRef={idToDeleteModifyRef} selectedRow={selectedRow} onUpdate={onUpdate} show={showModify} handleClose={() => setShowModify(false)} />
       <DeleteLine title={title} idToDeleteModifyRef={idToDeleteModifyRef} deleteFromList={deleteFromList} show={showDelete} handleClose={() => setShowDelete(false)} />

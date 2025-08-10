@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axiosRetry from "axios-retry";
 import axios from "axios";
-//import { REACT_APP_API_URL, TOKEN_NAME } from "@env";
 import { getItem } from "../auth/localStorage";
 import { useEffect } from "react";
 
@@ -36,7 +35,7 @@ export const useUser = () => {
         return response.data;
 
       } catch(error) {
-        console.log("Error get user : ",error);
+        console.error("Error get user : ",error);
       }
     };
   
@@ -54,7 +53,7 @@ export const useUser = () => {
   
         return response.data;
       } catch (error) {
-        console.log("Erreur get Users : ", error);
+        console.error("Erreur get Users : ", error);
       }
     };
   
@@ -89,7 +88,7 @@ export const useUser = () => {
     password,
     isAdmin  
   }) => {
-    return await axios({
+    return axios({
       method: "patch",
       url: `${REACT_APP_API_URL}/user/admin`,
       data: { user_id,
@@ -117,7 +116,7 @@ export const useUser = () => {
       return response.data;
 
     } catch(error) {
-      console.log("Error get user : ",error);
+      console.error("Error get user : ",error);
     }
   };
     return {

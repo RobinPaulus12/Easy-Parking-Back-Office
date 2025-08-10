@@ -42,7 +42,6 @@ function ParkingPage() {
   const transaction = "localités";
 
   useEffect(() => {
-    // Charger les formFields dans le store Redux
     dispatch(setFormFields(formFields));
     dispatch(setTransaction(transaction));
   }, [dispatch, formFields]);
@@ -67,19 +66,18 @@ function ParkingPage() {
   };
 
   useEffect(() => {
-    fetchParking(currentPage, searchTerm); // Chargement à chaque changement de page ou recherche
+    fetchParking(currentPage, searchTerm); 
   }, [currentPage, searchTerm]);
 
-  // Lors de l'ajout, recharger la dernière page
+  
   const addToList = async () => {
     const newTotal = totalParkings + 1;
     const newPage = Math.ceil(newTotal / parkingPerPages);
     setTotalParking(newTotal);
-    setCurrentPage(newPage); // Cela déclenche useEffect → fetchParking
+    setCurrentPage(newPage); 
     await fetchParking(newPage, searchTerm);
   };
 
-  // Recharger la liste lors d'une modification
   const handleUpdate = async () => {
     await fetchParking(currentPage, searchTerm);
   };
@@ -91,7 +89,6 @@ function ParkingPage() {
   setTotalParking(newTotal);
   setCurrentPage(newPage);
 
-  // Ne supprime pas localement, on laisse fetchCar faire la mise à jour
   await fetchParking(newPage, searchTerm);
   
 };

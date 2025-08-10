@@ -32,20 +32,18 @@ function PlacePage() {
     const transaction = "parking";
 
     useEffect(() => {
-      // Charger les formFields dans le store Redux
       dispatch(setFormFields(formFields));
       dispatch(setTransaction(transaction));
     }, [dispatch, formFields,transaction]);
 
     useEffect(() => {
-          // Au tout début, on charge les users une seule fois
           const loadParking = async () => {
             const parkingData = await getAllParkingsPagination(1, '');
             setParking(parkingData.rows);
             setParkingReady(true);
           };
           loadParking();
-        }, []); // ⬅️ [] pour que ce soit seulement au montage du composant
+        }, []);
 
     
     const formatDateTime = (dateStr) => {
@@ -83,17 +81,17 @@ function PlacePage() {
       }
     }, [currentPage,searchTerm,parkingReady]);
     
-    // Lors de l'ajout, recharger la dernière page
+  
     const addToList = async () => {
       const newTotal = totalPlaces+ 1;
       const newPage = Math.ceil(newTotal / placePerPage);
       setTotalPlaces(newTotal);
-      setCurrentPage(newPage); // Cela déclenchera useEffect → fetchUsers
+      setCurrentPage(newPage); 
       await fetchPlace(newPage,searchTerm);
     };
    
     const handleUpdate = async () => {
-  // Recharge la liste des voitures à la page actuelle avec le filtre de recherche actuel
+
   await fetchPlace(currentPage, searchTerm);
 };
 
@@ -104,7 +102,6 @@ const deleteFromList = async (place_id) => {
   setTotalPlaces(newTotal);
   setCurrentPage(newPage);
 
-  // Ne supprime pas localement, on laisse fetchCar faire la mise à jour
   await fetchPlace(newPage, searchTerm);
   };
   

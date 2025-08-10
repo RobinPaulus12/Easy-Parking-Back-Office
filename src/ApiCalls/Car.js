@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axiosRetry from "axios-retry";
 import axios from "axios";
 import { getItem } from "../auth/localStorage";
+import {toast} from 'react-toastify';
 
 axiosRetry(axios, {
   retries: 3,
@@ -28,7 +29,7 @@ export const useCar = () => {
       });
       return response.data;
     } catch (error) {
-      alert("Error delete car:", error);
+      ("Error delete car:", error);
     }
   };
 
@@ -42,7 +43,7 @@ export const useCar = () => {
       });
       return response.data;
     } catch (error) {
-      alert("Error get cars:", error);
+      toast.error("Error get cars:", error);
     }
   };
 

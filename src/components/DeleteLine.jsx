@@ -4,6 +4,7 @@ import { useParking} from '../ApiCalls/Parkings.js';
 import { useLocality } from '../ApiCalls/Locality.js';
 import { useCar } from '../ApiCalls/Car.js';
 import { usePlace } from '../ApiCalls/Place.js';
+import {toast} from 'react-toastify';
 function DeleteLine({ idToDeleteModifyRef, title, deleteFromList, show, handleClose }) {
   const { deleteCar } = useCar();
   const { deleteUser } = useUser();
@@ -39,7 +40,7 @@ function DeleteLine({ idToDeleteModifyRef, title, deleteFromList, show, handleCl
       deleteFromList(idToDelete);
       handleClose();
     } catch (error) {
-      alert("Erreur lors de la suppression :", error);
+      toast.error("Erreur lors de la suppression :", error);
     }
   };
 

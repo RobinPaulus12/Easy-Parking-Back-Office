@@ -4,6 +4,7 @@ import '../assets/styles/Home.css';
 import { useEffect,useState } from 'react';
 import { useUser } from '../ApiCalls/User.js';
 import { usePlace } from '../ApiCalls/Place.js';
+import {toast} from 'react-toastify';
 function Home() {
 
   const {getUsers} = useUser(); 
@@ -18,7 +19,7 @@ function Home() {
         setTotalUsers(parseInt(response.total));
       }
     } catch (error) {
-      alert("Erreur lors de la récupération des utilisateurs", error);
+      toast.error("Erreur lors de la récupération des utilisateurs", error);
     }
   };
 
@@ -48,7 +49,7 @@ function Home() {
     setAverageDuration(average); 
 
     } catch(error) {
-      alert("Erreur lors de la récuperation des places")
+      toast.error("Erreur lors de la récuperation des places")
     }
   }
 

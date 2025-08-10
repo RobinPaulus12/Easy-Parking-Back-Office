@@ -9,6 +9,7 @@ import { useCar } from '../ApiCalls/Car.js';
 import { usePlace } from '../ApiCalls/Place.js';
 import ModalForm from './ModalForm.jsx';
 import { useState } from "react";
+import {toast} from 'react-toastify';
 function AddLine({ title, onAdd, show, handleClose }) {
   const formFields = useSelector((state) => state.form.formFields);
   const transaction = useSelector((state) => state.form.transaction);
@@ -127,15 +128,15 @@ function AddLine({ title, onAdd, show, handleClose }) {
       }
     } catch (e) {
       if (e.response?.status === 500) {
-        alert("Erreur : données déjà existantes ou inexistante");
+        toast.error("Erreur : données déjà existantes ou inexistante");
       } else if (e.response?.status === 400) {
-        alert("Erreur de structure dans les données.");
+        toast.error("Erreur de structure dans les données.");
       } else if (e.response?.status === 404) {
-        alert("Erreur : ressource non trouvée.");
+        toast.error("Erreur : ressource non trouvée.");
       } else {
-        alert("Une erreur inconnue est survenue.");
+        toast.error("Une erreur inconnue est survenue.");
      }
-     alert("Erreur :", e);
+     toast.error("Erreur :", e);
     }
   };
 
@@ -215,11 +216,11 @@ function AddLine({ title, onAdd, show, handleClose }) {
       }
     } catch (e) {
       if (e.response?.status === 500) {
-        alert("Erreur : données déjà présentes.");
+        toast.error("Erreur : données déjà présentes.");
       } else if (e.response?.status === 400) {
-        alert("Erreur dans les données.");
+        toast.error("Erreur dans les données.");
       }
-      alert("Erreur transaction", e);
+      toast.error("Erreur transaction", e);
     }
   };
 

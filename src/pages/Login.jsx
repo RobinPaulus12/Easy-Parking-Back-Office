@@ -31,7 +31,6 @@ function Login() {
           toast.error("Nom d'utilisateur ou mot de passe incorrect");
         }
         setIsAuthenticated(false);
-        alert('Login failed:', e);
       });
   };
 

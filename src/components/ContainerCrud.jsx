@@ -5,7 +5,6 @@ import DeleteIcon from '../assets/images/trash 1.png';
 import DeleteLine from './DeleteLine';
 import AddLine from './AddLine';
 import ModifyLine from './ModifyLine';
-
 import { useState, useRef } from 'react';
 import Pagination from '@mui/material/Pagination';
 

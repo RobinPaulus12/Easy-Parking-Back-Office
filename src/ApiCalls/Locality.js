@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axiosRetry from "axios-retry";
 import axios from "axios";
 import { getItem } from "../auth/localStorage";
+import {toast} from 'react-toastify';
 
 axiosRetry(axios, {
   retries: 3,
@@ -28,7 +29,7 @@ export const useLocality = () => {
       });
       return response.data;
     } catch (error) {
-      alert("Error delete locality:", error);
+      toast.error("Error delete locality:", error);
     }
   };
 
@@ -42,7 +43,7 @@ export const useLocality = () => {
       });
       return response.data;
     } catch (error) {
-      alert("Error get localities:", error);
+      toast.error("Error get localities:", error);
     }
   };
 

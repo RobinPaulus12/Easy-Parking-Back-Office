@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axiosRetry from "axios-retry";
 import axios from "axios";
 import { getItem } from "../auth/localStorage";
+import {toast} from 'react-toastify';
 
 axiosRetry(axios, {
   retries: 3,
@@ -28,7 +29,7 @@ export const useUser = () => {
       });
       return response.data;
     } catch (error) {
-      alert("Error get user:", error);
+      toast.error("Error get user:", error);
     }
   };
 
@@ -42,7 +43,7 @@ export const useUser = () => {
       });
       return response.data;
     } catch (error) {
-      alert("Error get users:", error);
+      toast.error("Error get users:", error);
     }
   };
 
@@ -73,7 +74,7 @@ export const useUser = () => {
       });
       return response.data;
     } catch (error) {
-      alert("Error delete user:", error);
+      toast.error("Error delete user:", error);
     }
   };
 

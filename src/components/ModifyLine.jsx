@@ -5,6 +5,7 @@ import { useParking} from '../ApiCalls/Parkings.js';
 import { useLocality } from '../ApiCalls/Locality.js';
 import { useCar } from '../ApiCalls/Car.js';
 import { usePlace } from '../ApiCalls/Place.js';
+import {toast} from 'react-toastify';
 
 function ModifyLine({ idToDeleteModifyRef, title, selectedRow, onUpdate, show, handleClose }) {
   const formFields = useSelector((state) => state.form.formFields);
@@ -95,9 +96,9 @@ function ModifyLine({ idToDeleteModifyRef, title, selectedRow, onUpdate, show, h
       handleClose();
     } catch (error) {
       if (error.response?.status === 500) {
-        alert("Erreur : données déjà existantes ou inexistante");
+        toast.error("Erreur : données déjà existantes ou inexistante");
       } else if (error.response?.status === 400) {
-       alert("données mal formé ou invalide:", error);
+       toast.error("données mal formé ou invalide:", error);
       }
       
     }
@@ -118,8 +119,6 @@ function ModifyLine({ idToDeleteModifyRef, title, selectedRow, onUpdate, show, h
                    name={field.name}
                    label={field.label}
                    defaultChecked={selectedRow && field.name === "Admin" ? (selectedRow[field.name] === true || selectedRow[field.name] === "Oui" || selectedRow[field.name] === "true") : false}
-
-
                  />
               ) : (
                 <>

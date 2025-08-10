@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Auth from "../auth/authProvider";
 import { useContext } from 'react';
 import { useState } from 'react';
+import {toast} from 'react-toastify';
 
 
 
@@ -19,7 +20,7 @@ function Navbar() {
         navigate('/login');
        })
        .catch((e) => {
-        alert("error disconnect", e);
+        toast.error("error disconnect", e);
        })
     
       }

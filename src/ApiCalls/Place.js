@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axiosRetry from "axios-retry";
 import axios from "axios";
 import { getItem } from "../auth/localStorage";
+import {toast} from 'react-toastify';
 
 axiosRetry(axios, {
   retries: 3,
@@ -29,7 +30,7 @@ export const usePlace = () => {
       });
       return response.data;
     } catch (error) {
-      alert("Error delete place:", error);
+      toast.error("Error delete place:", error);
     }
   };
 
@@ -43,7 +44,7 @@ export const usePlace = () => {
       });
       return response.data;
     } catch (error) {
-      alert("Error get places:", error);
+      toast.error("Error get places:", error);
     }
   };
 
@@ -75,7 +76,7 @@ export const usePlace = () => {
       });
       return response.data;
     } catch (error) {
-      alert("Error get places for parking:", error);
+      toast.error("Error get places for parking:", error);
     }
   };
 

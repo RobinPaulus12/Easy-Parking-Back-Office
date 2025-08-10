@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axiosRetry from "axios-retry";
 import axios from "axios";
-//import { REACT_APP_API_URL, TOKEN_NAME } from "@env";
 import { getItem } from "../auth/localStorage";
 import { useEffect } from "react";
 

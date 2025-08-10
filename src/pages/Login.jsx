@@ -3,7 +3,6 @@ import '../assets/styles/login.css';
 import { login } from "../auth/authentification.js";
 import { useNavigate } from 'react-router-dom';
 import Auth from "../auth/authProvider";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from 'react-toastify';
 

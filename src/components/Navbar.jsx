@@ -1,6 +1,4 @@
-
 import '../assets/styles/navbar.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from 'react-router-dom';
 import { logout } from "../auth/authentification.js";
 import { useNavigate } from 'react-router-dom';

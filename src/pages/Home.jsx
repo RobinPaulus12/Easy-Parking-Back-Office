@@ -1,7 +1,5 @@
 import '../assets/styles/container.css'; 
 import Navbar from "../components/Navbar";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min'; 
 import '../assets/styles/Home.css';
 import { useEffect,useState } from 'react';
 import { useUser } from '../ApiCalls/User.js';

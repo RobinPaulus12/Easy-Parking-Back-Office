@@ -1,5 +1,4 @@
 import Navbar from "../components/Navbar.jsx";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/styles/pages.css';
 import ContainerCrud from "../components/ContainerCrud.jsx";
 import { useEffect,useState } from 'react';

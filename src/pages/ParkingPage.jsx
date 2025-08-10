@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import Navbar from "../components/Navbar.jsx";
 import ContainerCrud from "../components/ContainerCrud.jsx";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/styles/pages.css';
 import { setFormFields, setTransaction } from '../store/slice/form.js';
 import { useParking } from '../ApiCalls/Parkings.js';

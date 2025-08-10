@@ -1,12 +1,10 @@
 import Navbar from "../components/Navbar.jsx";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../assets/styles/pages.css';
 import ContainerCrud from "../components/ContainerCrud.jsx";
-import { useEffect,useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setFormFields, setTransaction} from '../store/slice/form.js';
 import { usePlace } from "../ApiCalls/Place.js";
 import { useParking } from "../ApiCalls/Parkings.js";
+
 function PlacePage() {
 
   const dispatch = useDispatch();

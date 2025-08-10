@@ -26,7 +26,7 @@ export const hasAuthentication = async () => {
 }
 
 export const login = async ({ username, password }) => {
-    const res = await axios.post(`${REACT_APP_API_URL}/user/login`, { username, password });
+    const res = axios.post(`${REACT_APP_API_URL}/user/login`, { username, password });
 
     const token = res.data.token;
 

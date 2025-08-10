@@ -9,7 +9,6 @@
   overflow-y: auto;
 }
 
-/* Titres et sous-titres */
 .dashboard-title {
   font-size: 1.5rem;
   font-weight: bold;
@@ -37,7 +36,7 @@
   color: #b3b3c3;
 }
 
-/* Section des statistiques */
+
 .dashboard-stats {
   display: flex;
   gap: 10px;
@@ -65,7 +64,7 @@
   margin-top: 5px;
 }
 
-/* Table fond et lignes */
+
 .custom-table {
   color: white;
   background-color: #1a1e2a;
@@ -90,13 +89,13 @@
   background-color: #212637 !important;
 }
 
-/* Cellules action (edit/delete) */
+
 .custom-table td#tdcolor {
   background-color: #212637 !important;
   text-align: center;
 }
 
-/* Icônes */
+
 .custom-table img {
   filter: brightness(200%);
   transition: transform 0.2s ease;
@@ -106,7 +105,7 @@
   transform: scale(1.1);
 }
 
-/* Barre de recherche */
+
 .barSearch input {
   background-color: #212637;
   border: 1px solid #444;
@@ -117,7 +116,7 @@
   color: #888;
 }
 
-/* Bouton "Ajouter" */
+
 .button {
   background-color: #4db8ff;
   color: white;

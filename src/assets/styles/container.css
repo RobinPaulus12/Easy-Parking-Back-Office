@@ -1,14 +1,13 @@
 .dashboard-card {
-    background-color: #151A23; /* Fond de la carte */
+    background-color: #151A23;
     color: white;
     padding: 40px;
     border-radius: 10px;
     margin-top: -460px;
-    width: 100%; /* Prend toute la largeur du parent */
+    width: 100%; 
     width: 1380px;
   }
   
-  /* Titres et sous-titres */
   .dashboard-title {
     font-size: 1.5rem;
     font-weight: bold;
@@ -21,7 +20,7 @@
   }
   
   .dashboard-id span {
-    color: white; /* Accentuer l'ID */
+    color: white; 
     font-weight: bold;
   }
   
@@ -36,40 +35,38 @@
     color: #b3b3c3;
   }
   
-  /* Section des statistiques */
   .dashboard-stats {
     display: flex;
-    gap: 10px; /* Espacement entre les cartes */
+    gap: 10px; 
     margin-top: 15px;
   }
   
   .dashboard-stat {
-    background-color: #3a3a4a; /* Fond des cartes individuelles */
-    padding: 15px;
+    background-color: #3a3a4a;
     border-radius: 8px;
     text-align: center;
     flex: 1;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
   
   .stat-value {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #4db8ff; /* Bleu pour les valeurs */
+    color: #4db8ff;
   }
   
   .stat-label {
     font-size: 0.9rem;
-    color: #b3b3c3; /* Texte secondaire */
+    color: #b3b3c3;
     margin-top: 5px;
   }
   
 
   .dashboard-info {
-    background-color: #212637; /* Fond de la carte */
+    background-color: #212637; 
     color: white;
     padding: 20px;
-    width: 100%; /* Prend toute la largeur du parent */
+    width: 100%; 
     width: 1300px;
   }
 

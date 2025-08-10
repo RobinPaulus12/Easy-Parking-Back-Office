@@ -35,14 +35,14 @@ body {
   }
   
   #header {
-    display: flex; /* Utilise Flexbox */
-    align-items: center; /* Aligne le logo et le texte verticalement */
-    gap: 10px; /* Espace entre le logo et le texte */
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
     margin-left: 80px; 
     margin-bottom: 50px;
   }
   
-  /* Champs de formulaire */
+
   #label {
     display: block;
     margin-bottom: 8px;
@@ -51,7 +51,7 @@ body {
     color:#ffffff
   }
   
-  /* Bouton de connexion */
+  
   button {
     width: 100%;
     padding: 10px;
@@ -73,7 +73,7 @@ body {
     color: red;
     font-size: 14px;
     margin-top: 10px;
-    width: 100%;/* Pour occuper toute la largeur de l'input */
-    text-align: left; /* Pour s'assurer que le texte est bien aligné */
+    width: 100%;
+    text-align: left; 
   }
 

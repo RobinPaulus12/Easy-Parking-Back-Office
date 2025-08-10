@@ -1,4 +1,3 @@
-
 export const getItem = (tokenName) => {
     const token = localStorage.getItem(tokenName);
     return token;

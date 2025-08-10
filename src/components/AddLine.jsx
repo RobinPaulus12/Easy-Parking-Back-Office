@@ -60,8 +60,6 @@ function AddLine({ title, onAdd, show, handleClose }) {
     try {
       const formData = {};
       formFields.forEach((field) => {
-
-        // recuperer les données de l'utilisateur a modifier lorsqu'il soumet le formulaire
         if (field.type === "checkbox") {
            formData[field.name] = e.target[field.name].checked;
         } else {
@@ -166,12 +164,12 @@ function AddLine({ title, onAdd, show, handleClose }) {
       switch (title) {
         case "voitures":
           await addCarWithRegistration({ 
-            license_plate: formDatas.Plaque_Immatriculation,   // plaque d'immatriculation
-            model: formDatas.Modele,           // modèle de la voiture
-            firstname: formDatas.Prenom,      // prénom de l'utilisateur
-            name: formDatas.Nom,          // nom de l'utilisateur
-            date_of_birth: formDatas.Date_de_Naissance, // date de naissance
-            username: formDatas.Pseudo,        // pseudo
+            license_plate: formDatas.Plaque_Immatriculation, 
+            model: formDatas.Modele,           
+            firstname: formDatas.Prenom,      
+            name: formDatas.Nom,          
+            date_of_birth: formDatas.Date_de_Naissance, 
+            username: formDatas.Pseudo,
             password: formDatas.Mot_de_passe,
             isAdmin:formDatas.Admin
           });

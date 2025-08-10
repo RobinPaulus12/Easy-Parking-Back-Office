@@ -13,10 +13,9 @@ function Home() {
 
   const [totalUsers, setTotalUsers] = useState(0);
 
-  // Fonction pour récupérer le nombre total d'utilisateurs
   const getTotalUsersCount = async () => {
     try {
-      const response = await getUsers(1); // page 1, peu importe ici
+      const response = await getUsers(1); 
       if (response && response.total) {
         setTotalUsers(parseInt(response.total));
       }
@@ -29,14 +28,13 @@ function Home() {
     getTotalUsersCount(); 
   }, []);
 
-  // calculer la durée moyenne d'occupation d'une place
   const [averageDuration, setAverageDuration] = useState(0);
 
   const calculateDurationInMinutes = (arrivee, depart) => {
     const arriveeDate = new Date(arrivee);
     const departDate = new Date(depart);
-    const durationInMillis = departDate - arriveeDate; // Durée en millisecondes
-    const durationInMinutes = durationInMillis / (1000 * 60); // Convertir en minutes
+    const durationInMillis = departDate - arriveeDate; 
+    const durationInMinutes = durationInMillis / (1000 * 60); 
     return durationInMinutes;
   };
 
@@ -60,7 +58,6 @@ function Home() {
     getAverageOccupationDuration();
   }, []);
 
-  // Fonction pour formater la durée en "h:mm"
   const formatDuration = (minutes) => {
     const hours = Math.floor(minutes / 60);
     const mins = Math.round(minutes % 60);

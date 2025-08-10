@@ -13,11 +13,7 @@ import { useState } from 'react';
 function Navbar() {
   const navigate = useNavigate();
   const {setIsAuthenticated} = useContext(Auth);
-
-   // 👉 État pour afficher ou non la modale
    const [showModal, setShowModal] = useState(false);
-
-  
   const handleLogout = () => {
        logout()
        .then(() => {
@@ -25,7 +21,7 @@ function Navbar() {
         navigate('/login');
        })
        .catch((e) => {
-        console.log("error disconnect", e);
+        console.error("error disconnect", e);
        })
     
       }
@@ -46,9 +42,6 @@ function Navbar() {
         <p className="disconnect-navbar" id="header2" onClick={() => setShowModal(true)}><img src="src/assets/images/Logout.png" alt="image"/>Se déconnecter</p>
         </nav>
         
-    
-
-    {/* ✅ MODALE DE CONFIRMATION */}
     {showModal && (
       <div className="modal fade show" style={{ display: 'block' }} tabIndex="-1" role="dialog">
         <div className="modal-dialog" role="document">

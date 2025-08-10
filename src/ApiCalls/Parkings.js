@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axiosRetry from "axios-retry";
 import axios from "axios";
-//import { REACT_APP_API_URL, TOKEN_NAME } from "@env";
 import { getItem } from "../auth/localStorage";
 import { useEffect } from "react";
 
@@ -37,7 +36,7 @@ export const useParking = () => {
         return response.data;
 
       } catch(error) {
-        console.log("Error get parking : ",error);
+        console.error("Error get parking : ",error);
       }
     };
   
@@ -55,7 +54,7 @@ export const useParking = () => {
   
         return response.data;
       } catch (error) {
-        console.log("Erreur get parkings : ", error);
+        console.error("Erreur get parkings : ", error);
       }
     };
   
@@ -69,7 +68,7 @@ export const useParking = () => {
       place_width,
       fk_locality,
     }) => {
-      return await axios({
+      return axios({
         method: "patch",
         url: `${REACT_APP_API_URL}/parking/`,
         data: { parking_id,

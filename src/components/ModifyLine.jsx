@@ -22,7 +22,7 @@ function ModifyLine({ idToDeleteModifyRef, title, selectedRow, onUpdate, show, h
     try {
       const formData = {};
       formFields.forEach((field) => {
-        // recuperer les données de l'utilisateur a modifier lorsqu'il soumet le formulaire
+
         let fieldValue;
         if (field.type === "checkbox") {
            fieldValue = e.target[field.name].checked;
@@ -82,13 +82,6 @@ function ModifyLine({ idToDeleteModifyRef, title, selectedRow, onUpdate, show, h
           break;
 
         case "places":
-          console.log("Données envoyées :", formData);
-console.log("Formatées :", {
-  place_id: idModify,
-  arrival_time: formData.Heure_arrive,
-  departure_time: formData.Heure_depart,
-  fk_parking: formData.Parking
-});
           await updatePlace({
             place_id: idModify,
             arrival_time: formData.Heure_arrive,

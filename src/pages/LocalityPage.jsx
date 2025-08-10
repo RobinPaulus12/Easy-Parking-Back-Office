@@ -28,7 +28,6 @@ function LocalityPage() {
 
 
   useEffect(() => {
-    // Charger les formFields dans le store Redux
     dispatch(setFormFields(formFields));
   }, [dispatch, formFields]);
 
@@ -48,20 +47,19 @@ function LocalityPage() {
   };
 
   useEffect(() => {
-    fetchLocality(currentPage, searchTerm); // Appel de la fonction de récupération des utilisateurs au chargement du composant
+    fetchLocality(currentPage, searchTerm);
   }, [currentPage, searchTerm]);
 
-  // Lors de l'ajout, recharger la dernière page
+
   const addToList = async () => {
     const newTotal = totalLocalitiy + 1;
     const newPage = Math.ceil(newTotal / localityPerPages);
     setTotalLocality(newTotal);
-    setCurrentPage(newPage); // Cela déclenchera useEffect → fetchUsers
+    setCurrentPage(newPage); 
     await fetchLocality(newPage, searchTerm);
   };
 
   const handleUpdate = async () => {
-    // Recharge la liste des voitures à la page actuelle avec le filtre de recherche actuel
     await fetchLocality(currentPage, searchTerm);
   };
    const deleteFromList = async (locality_id) => {
@@ -71,7 +69,6 @@ function LocalityPage() {
   setTotalLocality(newTotal);
   setCurrentPage(newPage);
 
-  // Ne supprime pas localement, on laisse fetchCar faire la mise à jour
   await fetchLocality(newPage, searchTerm);
   };
 

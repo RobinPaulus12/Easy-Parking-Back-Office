@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axiosRetry from "axios-retry";
 import axios from "axios";
-//import { REACT_APP_API_URL, TOKEN_NAME } from "@env";
 import { getItem } from "../auth/localStorage";
 import { useEffect } from "react";
 
@@ -35,7 +34,7 @@ export const useLocality = () => {
         return response.data;
 
       } catch(error) {
-        console.log("Error get user : ",error);
+        console.error("Error get user : ",error);
       }
     };
   
@@ -53,7 +52,7 @@ export const useLocality = () => {
   
         return response.data;
       } catch (error) {
-        console.log("Erreur get Users : ", error);
+        console.error("Erreur get Users : ", error);
       }
     };
   
@@ -85,7 +84,7 @@ export const useLocality = () => {
       postal_code,
       street_name,
     }) => {
-      return await axios({
+      return axios({
         method: "patch",
         url: `${REACT_APP_API_URL}/locality/`,
         data: { locality_id, city, country, postal_code, street_name},

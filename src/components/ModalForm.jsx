@@ -11,7 +11,6 @@ function ModalForm({ show, handleClose, modalTitle, fields, onSubmit }) {
         <Modal.Body>
           {fields.map((field, index) => (
             <Form.Group className="mb-3" controlId={field.id || field.name} key={index}>
-              {/* SI c'est une checkbox et qu'on est dans le formulaire voiture */}
               {field.type === "checkbox" && modalTitle.includes("voiture") ? (
                 <Form.Check
                   type="checkbox"

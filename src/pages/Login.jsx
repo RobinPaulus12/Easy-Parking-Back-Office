@@ -71,7 +71,7 @@ function Login() {
         <br />
         <div className="form-group">
           <button type="submit">Se connecter</button>
-          <ToastContainer /> {/* fait appel à la toast qui permet d'afficher un message d'erreur */}
+          <ToastContainer />
         </div>
       </form>
     </>

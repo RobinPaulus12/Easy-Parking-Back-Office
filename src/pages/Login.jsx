@@ -32,7 +32,7 @@ function Login() {
           toast.error("Nom d'utilisateur ou mot de passe incorrect");
         }
         setIsAuthenticated(false);
-        console.error('Login failed:', e);
+        alert('Login failed:', e);
       });
   };
 

@@ -39,7 +39,7 @@ function DeleteLine({ idToDeleteModifyRef, title, deleteFromList, show, handleCl
       deleteFromList(idToDelete);
       handleClose();
     } catch (error) {
-      console.error("Erreur lors de la suppression :", error);
+      alert("Erreur lors de la suppression :", error);
     }
   };
 

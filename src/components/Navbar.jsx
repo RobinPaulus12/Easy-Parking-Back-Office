@@ -21,7 +21,7 @@ function Navbar() {
         navigate('/login');
        })
        .catch((e) => {
-        console.error("error disconnect", e);
+        alert("error disconnect", e);
        })
     
       }

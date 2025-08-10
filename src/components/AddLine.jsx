@@ -135,7 +135,7 @@ function AddLine({ title, onAdd, show, handleClose }) {
       } else {
         alert("Une erreur inconnue est survenue.");
      }
-     console.error("Erreur :", e);
+     alert("Erreur :", e);
     }
   };
 
@@ -219,7 +219,7 @@ function AddLine({ title, onAdd, show, handleClose }) {
       } else if (e.response?.status === 400) {
         alert("Erreur dans les données.");
       }
-      console.error("Erreur transaction", e);
+      alert("Erreur transaction", e);
     }
   };
 

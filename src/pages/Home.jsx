@@ -20,7 +20,7 @@ function Home() {
         setTotalUsers(parseInt(response.total));
       }
     } catch (error) {
-      console.error("Erreur lors de la récupération des utilisateurs", error);
+      alert("Erreur lors de la récupération des utilisateurs", error);
     }
   };
 
@@ -50,7 +50,7 @@ function Home() {
     setAverageDuration(average); 
 
     } catch(error) {
-      console.error("Erreur lors de la récuperation des places")
+      alert("Erreur lors de la récuperation des places")
     }
   }
 

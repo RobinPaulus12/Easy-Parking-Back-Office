@@ -11,7 +11,7 @@ function Login() {
   const [password, setPassword] = useState('');
 
   const navigate = useNavigate();
-  const { setIsAuthenticated, setUserConnected, isAuthenticated } = useContext(Auth);
+  const { setIsAuthenticated, setUserConnected} = useContext(Auth);
 
   const handleConnexion = (e) => {
     e.preventDefault();
